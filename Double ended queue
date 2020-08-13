@@ -1,0 +1,34 @@
+Double ended queue
+
+# import collection module:
+Important collection
+# initialize deque:
+Dq = collection.deque([4,5,6])
+# append to the right:
+Dq.append(7)
+Print (“append 7 to the right:”,list(dg))
+# append to the left:
+Dq.appendleft(3)
+Print(“append 3 to the left:”,list(dg))
+# append multiple values to left:
+Dq.extendleft([1,2])
+Print (“append 2 and 1 to the left:”,list(dq))
+# insert -1 at index 5:
+Dq.insert(5,-1)
+Print(“insert -1 at index 5:”,list(dg))
+# pop element from the right end:
+Dq.pop()
+Print(“remove element from the right:”,list(dq))
+# pop element from left end:
+Dq.popleft()
+Print (“remove element from the left:”,list(dq))
+# remove -1
+Dq.remove(-1)
+Print (“remove -1:”,list(dq))
+# count the number of times 5 occurs:
+I=dq.count(5)
+Print (“count the number of time 5 occurs:”,I)
+# reverse the whole deque:
+Dq.reverse()
+Print (“reverse the deque:”,list(dq))
+
