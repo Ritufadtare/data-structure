@@ -1,0 +1,160 @@
+Practical-1 a
+# Implement the following for Array:
+# Write a program to store the elements in 1-D array and provide an option 
+# to perform the operations like searching, sorting, merging, reversing the elements.
+arr1=[12,35,42,22,1,6,54]
+arr2=['hello','world']
+arr1.index(35)
+print(arr1)
+arr1.sort()
+print(arr1)
+arr1.extend(arr2)
+print(arr1)
+arr1.reverse()
+print(arr1)
+
+Practical-1 b
+# Program to add two matrices 
+X = [[11,7,3], 
+      [4 ,5,6], 
+      [7 ,8,9]] 
+    
+Y = [[5,8,1], 
+      [6,7,3], 
+      [4,5,9]] 
+
+result = [[0,0,0], 
+          [0,0,0], 
+          [0,0,0]] 
+
+# iterate through rows 
+for i in range(len(X)): 
+# iterate through columns       
+    for j in range(len(X[0])): 
+        result[i][j] = X[i][j] + Y[i][j] 
+        for r in result: 
+            print(r)
+            
+# Program to multiply two matrices
+ # 3x3 matrix 
+X = [[12,7,3], 
+     [4 ,5,6], 
+     [7 ,8,9]] 
+# 3x4 matrix 
+Y = [[5,8,1,2], 
+     [6,7,3,0], 
+     [4,5,9,1]] 
+# result is 3x4 
+result = [[0,0,0,0], 
+          [0,0,0,0], 
+          [0,0,0,0]]
+ # iterate through rows of X 
+for i in range(len(X)): 
+# iterate through columns of Y 
+    for j in range(len(Y[0])): 
+# iterate through rows of Y 
+        for k in range(len(Y)):      
+            result[i][j] += X[i][k] * Y[k][j] 
+            for r in result: 
+                print(r)
+                
+# Program to transpose a matrix 
+X = [[12,7], [4 ,5], [3 ,8]]
+result = [[0,0,0], [0,0,0]]
+ # iterate through rows
+for i in range(len(X)): 
+# iterate through columns 
+    for j in range(len(X[0])): 
+        result[j][i] = X[i][j] 
+        for r in result: 
+            print(r)
+
+Practical-2 
+P.2. Implement linked list Includes options for 
+Insertion deletion and search of a number, reverse
+The list and concatenate two minded lists.
+
+def __init__(self, data): 
+
+        self.data = data 
+
+        self.next = None
+
+class LinkedList: 
+
+    # Function to initialize head 
+
+    def __init__(self): 
+
+        self.head = None
+
+ 
+    # Function to reverse the linked list 
+
+    def reverse(self): 
+
+        prev = None
+
+        current = self.head 
+
+        while(current is not None): 
+
+            next = current.next
+
+            current.next = prev 
+
+            prev = current 
+
+            current = next
+
+        self.head = prev 
+
+          
+
+    # Function to insert a new node at the beginning 
+
+    def push(self, new_data): 
+
+        new_node = Node(new_data) 
+
+        new_node.next = self.head 
+
+        self.head = new_node 
+
+  
+
+    # Utility function to print the linked LinkedList 
+
+    def printList(self): 
+
+        temp = self.head 
+
+        while(temp): 
+
+            print temp.data, 
+
+            temp = temp.next
+
+  
+
+  
+# Driver program to test above functions 
+
+llist = LinkedList() 
+
+llist.push(20) 
+
+llist.push(4) 
+
+llist.push(15) 
+
+llist.push(85) 
+
+  
+
+print "Given Linked List"
+llist.printList() 
+llist.reverse() 
+
+print "\nReversed Linked List"
+llist.printList()
